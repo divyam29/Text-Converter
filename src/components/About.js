@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import 'D:/Vs code/ReactJS/2_project1/src/App.css';
 
 export default function About(props) {
 
