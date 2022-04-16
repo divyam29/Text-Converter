@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import React, { useState } from 'react';
 import Alert from './components/Alert';
-import { Routes, Route} from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 // we need to import components in app.js
 
 function App() {
@@ -112,3 +112,22 @@ export default App;
 // we dont need any other files or folders
 // open create-react-app.dev/docs/deployment
 // Scroll down to github pages section
+// Follow the doc steps to deploy app on github server
+// Also first we need to create a repo on github
+
+//TODO: Step 1
+// Open your package.json and add a homepage field for your project:
+  // "homepage": "https://<myusername>.github.io/<my-app>",
+
+// TODO: Step 2
+// npm install --save gh-pages
+
+// TODO: Step 3
+// Add the following scripts in your package.json:
+//   "scripts": {
+// +   "predeploy": "npm run build",
+// +   "deploy": "gh-pages -d build",
+
+// TODO: Step 4
+// Then run:
+// npm run deploy
