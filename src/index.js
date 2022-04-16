@@ -9,7 +9,7 @@ import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <BrowserRouter  basename='/'>
+  <BrowserRouter  basename='/home'>
     <App />
   </BrowserRouter>,
   // Change here for react router
