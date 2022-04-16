@@ -131,3 +131,10 @@ export default App;
 // TODO: Step 4
 // Then run:
 // npm run deploy
+
+// TODO: Step 5
+// Now goto github repo
+// Click on settings
+// Click on pages
+// There select branch gh-pages if not already selected
+// use link to goto the page
