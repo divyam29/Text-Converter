@@ -67,15 +67,17 @@ function App() {
 
       <Alert alert={alert} />
       {/* We passed alert state in Alert component so we can change state of Alert component */}
+
       <Routes>
-        <Route path="/" element={
+        <Route exact path="/" element={
+          // Use exact path instead of path in router for better effeiency
           <div className="container">
             <TextForm showAlert={showAlert} heading="Enter the Text" mode={mode} />
           </div>
         } />
         {/* passes show alert as prop to textform */}
         {/* Here we use react router to set href / to textform component */}
-        <Route path="/about" element={
+        <Route exact path="/about" element={
           <div className="container">
             <About heading="About Us" mode={mode} />
           </div>
