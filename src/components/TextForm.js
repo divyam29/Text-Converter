@@ -48,9 +48,9 @@ export default function TextForm(props) {
     // setText("new Text")
     // ? Correct way
 
-    const myStyleSheet={
-        backgroundColor: props.mode==='light'?'white':'#143F6B',
-        color: props.mode==='light'?'black':'white',
+    const myStyleSheet = {
+        backgroundColor: props.mode === 'light' ? 'white' : '#143F6B',
+        color: props.mode === 'light' ? 'black' : 'white',
     }
 
     return (
@@ -64,25 +64,27 @@ export default function TextForm(props) {
                     {/* As we have given a value for textarea and {text} is constant so we would not able to change the text in textarea */}
                     {/* For this we used onChange event listener <see handleOnChange> */}
                 </div>
-                <button type="button" className="btn btn-primary mx-1" onClick={handleUpperCase}>Convert to UpperCase</button>
-                <button type="button" className="btn btn-primary mx-1" onClick={handleLowerCase}>Convert to LowerCase</button>
+                <button type="button" className="btn btn-primary mx-1 my-1" onClick={handleUpperCase}>Convert to UpperCase</button>
+                <button type="button" className="btn btn-primary mx-1 my-1" onClick={handleLowerCase}>Convert to LowerCase</button>
                 {/* Similarly onClick is also an event listener */}
-                <button type="button" className="btn btn-primary mx-1" onClick={handleRandomText}>Random Text Generator</button>
-                <button type="button" className="btn btn-primary mx-1" onClick={handleClearText}>Clear</button>
+                <button type="button" className="btn btn-primary mx-1 my-1" onClick={handleRandomText}>Random Text Generator</button>
+                <button type="button" className="btn btn-primary mx-1 my-1" onClick={handleClearText}>Clear</button>
 
             </div>
 
             <div className="container my-5" style={myStyleSheet}>
                 <h3>Text Summary: </h3>
-                <p>{text.split(" ").length} Words and {text.length} characters</p>
-                <p>Time to read text {(text.split(" ").length) * 0.008} minutes</p>
+                <p>{text.split(" ").filter((element) => { return element.length !== 0 }).length} Words and {text.length} characters</p>
+                {/* Due to split function we will not preview empty spaces as individual words */}
+
+                <p>Time to read text {(text.split(" ").filter((element) => { return element.length !== 0 }).length) * 0.008} minutes</p>
                 {/* We use split function to split the text into array of words and length to count the characters */}
                 {/* text.length gives number characters of the variable */}
             </div>
 
             <div className="container" style={myStyleSheet}>
                 <h3>Preview: </h3>
-                <p>{text.length>0?text:"Enter some text in above textbox to preview it here..."}</p>
+                <p>{text.length > 0 ? text : "Enter some text in above textbox to preview it here..."}</p>
                 {/* We can use ternary operator in JS to display text */}
             </div>
         </>

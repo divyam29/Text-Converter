@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import logo from './../assets/logo512.png';
 
 export default function About(props) {
 
@@ -84,8 +85,8 @@ export default function About(props) {
                 <button type="button" className="btn btn-dark my-3" onClick={toggleStyle} style={btnStyle}>{btnText}</button>
                 {/* When we click this button toggleStyle function in executed which changes light mode to dark mode */}
             </div>
+            <img src={require('./../assets/logo512.png')} alt='no' />
         </div>
-
     );
 };
 

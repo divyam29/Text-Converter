@@ -5,6 +5,7 @@ import TextForm from './components/TextForm';
 import React, { useState } from 'react';
 import Alert from './components/Alert';
 import { Routes, Route } from "react-router-dom";
+import logo from './assets/logo512.png';
 // we need to import components in app.js
 
 function App() {
@@ -83,6 +84,7 @@ function App() {
           </div>
         } />
       </Routes>
+      <img src={logo} alt='no' />
 
       {/* React router is used to navigate between pages without reloading again and again */}
       {/* To use react router we need to change all <a> tags to link and href attribute to "to" in all components */}

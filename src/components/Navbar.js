@@ -31,7 +31,7 @@ export default function Navbar(props) {
         <nav className={`navbar sticky-top navbar-expand-lg navbar-${props.mode} ${props.mode === 'dark' ? 'bg-dark' : ''}`} style={props.mode === 'light' ? myStyleSheet : {}}>
             {/* using ternary operator we have set the navbar properties */}
             <div className="container-fluid">
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="/navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <Link className="navbar-brand" to="/">{props.title}</Link>
